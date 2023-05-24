@@ -1,1 +1,48 @@
-// Заголовки, общие БЄМ блоки и проче...
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+//margins
+
+//bot
+.margin-16-bot {
+    margin-bottom: 16px;
+}
+
+.margin-24-bot {
+    margin-bottom: 24px;
+}
+
+.margin-32-bot {
+    margin-bottom: 32px;
+}
+
+//top
+.margin-16-top {
+    margin-top: 16px;
+}
+
+.margin-24-top {
+    margin-top: 24px;
+}
+
+//right
+.margin-16-right {
+    margin-right: 16px;
+}
+
+.margin-24-right {
+    margin-right: 24px;
+}
+
+.margin-28-right {
+    margin-right: 28px;
+}
+
+.margin-32-right {
+    margin-right: 32px;
+}

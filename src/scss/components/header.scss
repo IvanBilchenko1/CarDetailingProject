@@ -1,6 +1,7 @@
 // =====================================================================================================================
 .header {
   width: 100%;
+  background-color: rgb(36, 36, 36);
 
   &.sticky {
     // ..стили для липкого хедера
@@ -11,62 +12,38 @@
     height: rem($headerHeight);
     display: flex;
     align-items: center;
-  }
-}
-// =====================================================================================================================
+    justify-content: space-between;
 
-// Burger
-/*
-.icon-menu {
-  display: none;
+    .header__menu {
+      align-items: center;
+        .menu__list {
+          align-items: center;
+          margin-right: 24px;
 
-  @include media(767) {
-    display: block;
-    position: relative;
-    width: rem(30);
-    height: rem(18);
-    cursor: pointer;
-    z-index: 5;
+          li {
+            margin-right: 16px;
 
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 300ms ease 0ms;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: #000;
-    }
+            a {
+              color: $whiteColor;
+            }
 
-    &::before {
-      top: 0;
-    }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
 
-    &::after {
-      bottom: 0;
-    }
+        .menu__social {
+          align-items: center;
 
-    span {
-      top: calc(50% - rem(1));
-    }
+          li {
+            margin-right: 16px;
 
-    .menu-open & {
-      span {
-        width: 0;
-      }
-
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
-
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
     }
   }
 }
-*/
