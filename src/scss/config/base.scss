@@ -4,6 +4,24 @@ body {
     touch-action: none;
   }
 }
+
+.sticky-link {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(180deg);
+  transform-origin: center;
+  writing-mode: vertical-rl;
+  background-color: #dbdbdb;
+  padding: 16px 16px 16px 4px;
+  border-radius: 0 8px 8px 0;
+
+  span {
+    color: black;
+    font-weight: 700;
+  }
+}
+
 // Базовые анимации:
 // @import "keyframes";
 
