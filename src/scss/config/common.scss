@@ -1,9 +1,56 @@
+.menu__item {
+    font-family: $fontFamily;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.link {
+    display: inline-block;
+    position: relative;
+    font-family: $fontFamily;
+    line-height: 120%;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        bottom: 0;
+        height: 2px;
+        margin: -5px 0;
+        left: 0;
+        background-color: $whiteColor;
+        transition: all 0.3s ease-in 0s;
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
+}
+
+
+
+.icon {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+// align
 .flex {
     display: flex;
 }
 
 .space-between {
     justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
 }
 
 //margins
@@ -46,3 +93,26 @@
 .margin-32-right {
     margin-right: 32px;
 }
+
+//fonts
+.text {
+    font-family: $fontFamily;
+    line-height: 120%;
+}
+
+.text-orange {
+    color: $orangeColor;
+}
+
+.normal {
+    font-weight: 400;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 800;
+}
+

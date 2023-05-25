@@ -1,0 +1,14 @@
+.start-block {
+    position: relative;
+    background: url('../images/orange-car.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-page {
+    padding: $mainPadding;
+
+    .main-title-text {
+        font-size: 54px;
+    }
+}

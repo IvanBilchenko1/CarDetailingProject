@@ -1,7 +1,7 @@
 // =====================================================================================================================
 .header {
   width: 100%;
-  background-color: rgb(36, 36, 36);
+  background-color: $grayColor;
 
   &.sticky {
     // ..стили для липкого хедера
@@ -24,7 +24,25 @@
             margin-right: 16px;
 
             a {
-              color: $whiteColor;
+              display: inline-block;
+              position: relative;
+
+              &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 0;
+                bottom: 0;
+                height: 2px;
+                margin: -5px 0;
+                left: 0;
+                background-color: white;
+                transition: all 0.3s ease-in 0s;
+              }
+
+              &:hover:after {
+                width: 100%;
+              }
             }
 
             &:last-child {

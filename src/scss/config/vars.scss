@@ -1,3 +1,5 @@
+$mainPadding: 78px 0px 128px 0px;
+
 $maxWidth: 1920; // максимальная ширина страницы
 $minWidth: 320; // минимальная ширина телефона
 $maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
@@ -14,13 +16,12 @@ $mainRadius: rem(10);
 
 $whiteColor: #fff;
 $blackColor: #131313;
-$grayColor: #6f6f6f;
-$redColor: #ff4040;
+$grayColor: #292d33;
+$orangeColor: #e68c51;
 
 $firstAccentColor: $blackColor;
-$secondAccentColor: $redColor;
 
-$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
+$fontFamily: 'Free Habel Handwriting', cursive; // Семейство шрифта по умолчанию
 $fontColor: #fff; // Цвет шрифта по умолчанию
 $fontSize: 16; // Размер шрифта по умолчанию
 $fontWeight: $mainWeight; // Жирность шрифта по умолчанию
