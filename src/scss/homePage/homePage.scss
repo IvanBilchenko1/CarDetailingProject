@@ -1,3 +1,4 @@
+//main block start
 .start-block {
     position: relative;
     background: url('../images/orange-car.jpg') no-repeat;
@@ -9,6 +10,152 @@
     padding: $mainPadding;
 
     .main-title-text {
-        font-size: 54px;
+        font-size: $text-56;
+    }
+
+    .main-title-subtext {
+        font-size: $text-24;
+    }
+}
+
+//about block start
+.about-block {
+    margin: 100px 0px 100px 0px;
+
+    .about-us-wrapper {
+        .about-us-inner {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .about-us-description {
+                max-width: 555px;
+                width: 100%;
+                padding: 30px;
+
+                .about-us-header {
+                    h2 {
+                        font-size: 30px;
+                        font-weight: bold;
+                        letter-spacing: 5px;
+                    }
+                }
+
+                .about-us-header-text {
+                    p {
+                        font-size: 17px;
+                        font-weight: 500;
+                        line-height: 30px;
+                        letter-spacing: 3px;
+                    }
+                }
+
+                .about-us-main {
+                    p {
+                        font-size: 17px;
+                        font-weight: 400;
+                        line-height: 30px;
+                        letter-spacing: 0px;
+                    }
+                }
+
+                .about-us-button {
+                    display: inline-block;
+                    cursor: pointer;
+                    &:hover {
+                        animation: pulse 1.5s infinite;
+                    }
+                    a {
+                        font-family: "Asap", Sans-serif;
+                        font-size: 15px;
+                        font-weight: bold;
+                        letter-spacing: 5px;
+                        fill: #000;
+                        color: #000;
+                        text-transform: uppercase;
+                        background-color: #02010100;
+                        border-style: solid;
+                        border-width: 0px 0px 2px 0px;
+                        border-color: #000;
+                        border-radius: 0px 0px 0px 0px;
+                        padding: 10px;
+
+                        svg path {
+                            fill: black;
+                        }
+                    }
+                }
+            }
+
+            .about-us-image {
+
+                .image {
+                    width: 500px;
+                    height: 350px;
+                    position: relative;
+                    cursor: pointer;
+                  
+                    span {
+                      position: absolute;
+                      background: url(https://picsum.photos/id/182/2896/1944) no-repeat center/cover;
+                      inset: 0;
+                      transition: 0.6s ease-in-out;
+                  
+                      &:nth-child(1) {
+                        clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+                        transition-delay: 0;
+                      }
+                  
+                      &:nth-child(2) {
+                        clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+                        transition-delay: 0.25s;
+                      }
+                  
+                      &:nth-child(3) {
+                        clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+                        transition-delay: 0.5s;
+                      }
+                  
+                      &:nth-child(4) {
+                        clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+                        transition-delay: 0.75s;
+                      }
+                    }
+                  
+                    /* Hover Effects */
+                    &:hover {
+                      span:nth-child(1) {
+                        transform: translate(-40px, -60px) rotate(-15deg);
+                      }
+                  
+                      span:nth-child(2) {
+                        transform: translate(40px, -100px) rotate(25deg);
+                      }
+                  
+                      span:nth-child(3) {
+                        transform: translate(-40px, 80px) rotate(15deg);
+                      }
+                  
+                      span:nth-child(4) {
+                        transform: translate(40px, 80px) rotate(-15deg);
+                      }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.7;
     }
 }

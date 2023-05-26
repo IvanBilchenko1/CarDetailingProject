@@ -1,4 +1,5 @@
 body {
+  font-family: 'Asap', sans-serif;
   &.lock {
     overflow: hidden;
     touch-action: none;
@@ -12,14 +13,18 @@ body {
   transform: translateY(-50%) rotate(180deg);
   transform-origin: center;
   writing-mode: vertical-rl;
-  background-color: #dbdbdb;
+  background-color: #000;
+  font-family: $fontFamily;
+  letter-spacing: 6px;
+  border: 1px solid #fff;
+  border-left: none;
   padding: 16px 16px 16px 4px;
   border-radius: 0 8px 8px 0;
+  transition: letter-spacing 0.3s;
+}
 
-  span {
-    color: black;
-    font-weight: 700;
-  }
+.sticky-link:hover {
+  letter-spacing: 3px;
 }
 
 // Базовые анимации:
@@ -34,6 +39,10 @@ body {
 * всем классам содержащим *__container
 * Например header__container, main__container и т.д.
 */
+.full-container {
+  margin: 0 76px;
+}
+
 [class*='__container'] {
   max-width: rem($containerWidth + $mainOffset * 2);
   margin: 0 auto;

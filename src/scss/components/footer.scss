@@ -1,6 +1,6 @@
 .footer {
   padding: rem(40) 0;
-  background: $grayColor;
+  background: $blackColor;
 
   // .footer__container
   &__container {
@@ -12,12 +12,27 @@
     }
   }
 
+  .menu__item {
+    letter-spacing: 4px;
+  }
+
   .footer__nav-info {
     .footer__nav-name {
         h2 {
         font-size: 32px;
         }
     }
+  }
+
+  .footer__nav-follow {
+    li {
+      a {
+        svg {
+          margin-right: 8px;
+        }
+      }
+    }
+
   }
   
 }

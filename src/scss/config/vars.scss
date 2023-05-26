@@ -1,4 +1,4 @@
-$mainPadding: 78px 0px 128px 0px;
+$mainPadding: 186px 0px 402px 0px;
 
 $maxWidth: 1920; // максимальная ширина страницы
 $minWidth: 320; // минимальная ширина телефона
@@ -7,7 +7,7 @@ $containerWidth: 1160; // ширина контейнера из макета
 
 $mainOffset: 15; // отступы безопасности для контейнера
 $mainFont: ''; // !указать здесь основное семейство шрифта
-$mainWeight: 400; // !указать здесь основное начертание шрифта
+$mainWeight: 500; // !указать здесь основное начертание шрифта
 
 $headerHeight: 100;
 $footerHeight: 100;
@@ -15,13 +15,13 @@ $footerHeight: 100;
 $mainRadius: rem(10);
 
 $whiteColor: #fff;
-$blackColor: #131313;
+$blackColor: #000;
 $grayColor: #292d33;
 $orangeColor: #e68c51;
 
 $firstAccentColor: $blackColor;
 
-$fontFamily: 'Free Habel Handwriting', cursive; // Семейство шрифта по умолчанию
+$fontFamily: "Asap", Sans-serif; // Семейство шрифта по умолчанию
 $fontColor: #fff; // Цвет шрифта по умолчанию
 $fontSize: 16; // Размер шрифта по умолчанию
 $fontWeight: $mainWeight; // Жирность шрифта по умолчанию
@@ -35,3 +35,13 @@ $lightBoxShadow: 0 0 2px 0 rgba(#000, 10%), 0 0 4px 0 rgba(#000, 10%),
 
 $hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
   0 0 15px 0 rgba(#000, 10%);
+
+//fonts
+$text-14: 16px;
+$text-16: 16px;
+$text-18: 18px;
+$text-24: 24px;
+$text-28: 28px;
+$text-32: 32px;
+$text-42: 42px;
+$text-56: 56px;

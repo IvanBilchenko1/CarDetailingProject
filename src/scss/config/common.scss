@@ -8,6 +8,8 @@
     display: inline-block;
     position: relative;
     font-family: $fontFamily;
+    font-size: 15px;
+    letter-spacing: 2px;
     line-height: 120%;
 
     &:after {
@@ -19,7 +21,7 @@
         height: 2px;
         margin: -5px 0;
         left: 0;
-        background-color: $whiteColor;
+        background-color: $orangeColor;
         transition: all 0.3s ease-in 0s;
     }
 
@@ -28,7 +30,75 @@
     }
 }
 
+.btn {
+  position: relative;
+  height: 65px;
+  max-width: 410px;
+  width: 100%;
+  margin: 0 40px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  overflow: hidden;
+  transition: 0.6s;
+  color: $orangeColor;
+  
+  
+  &:before, &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    filter: blur(30px);
+    opacity: 0.4;
+    transition: 0.6s;
+  }
+  
+  &:before {
+    width: 60px;
+    background: rgba(255, 255, 255, 0.6);
+    transform: translateX(-130px) skewX(-45deg);
+  }
+  
+  &:after {
+    width: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    transform: translateX(-130px) skewX(-45deg);
+  }
+  
+  &:hover:before,
+  &:hover:after {
+    opacity: 0.6;
+    transform: translateX(320px) skewX(-45deg);
+  }
+  
+  &:hover {
+    color: #fff;
+    border: none;
+    background: #000;
+    transform: translateY(-5px)
+  }
+}
 
+.btn-2 {
+    background-color: $orangeColor;
+    color: #fff;
+
+    &:hover {
+        color: $orangeColor;
+        border: none;
+        background: #000;
+        color: #fff;
+        transform: translateY(5px)
+    }
+}
 
 .icon {
     display: inline-block;
@@ -38,6 +108,14 @@
     &:hover {
         transform: translateY(-5px);
     }
+}
+
+.text-orange {
+    color: $orangeColor;
+}
+
+.text-black {
+    color: black;
 }
 
 // align
@@ -94,10 +172,9 @@
     margin-right: 32px;
 }
 
-//fonts
-.text {
-    font-family: $fontFamily;
-    line-height: 120%;
+//ver 
+.margin-32-ver {
+    margin: 32px 0 32px 0px;
 }
 
 .text-orange {
