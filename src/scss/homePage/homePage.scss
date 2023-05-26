@@ -25,12 +25,11 @@
     .about-us-wrapper {
         .about-us-inner {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             .about-us-description {
                 max-width: 555px;
                 width: 100%;
-                padding: 30px;
 
                 .about-us-header {
                     h2 {
@@ -145,17 +144,18 @@
     }
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(0.8);
-        opacity: 0.7;
-    }
-    50% {
-        transform: scale(1);
-        opacity: 0.4;
-    }
-    100% {
-        transform: scale(0.8);
-        opacity: 0.7;
+//How it works start
+
+.how-it-works-block {
+    background-color: #000;
+
+    .how-it-works-wrapper {
+        .how-it-works-title {
+
+        }
+
+        .how-it-works-cart {
+            
+        }
     }
 }
