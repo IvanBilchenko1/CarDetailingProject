@@ -8,15 +8,18 @@
       @@include('html/header.html', {})
       <main class="page">
         <div data-observ></div>
-        <div class="start-block">
+        <section class="start-block">
           @@include('html/homePage/mainBlock.html', {})
-        </div>
-        <div class="about-block">
+        </section>
+        <section class="about-block">
           @@include('html/homePage/aboutBlock.html', {})
-        </div>
-        <div class="how-it-works-block">
+        </section>
+        <section class="how-it-works-block">
           @@include('html/homePage/howItWorks.html', {})
-        </div>
+        </section>
+        <section class="why-choose-block">
+          @@include('html/homePage/whyChooseUs.html', {})
+        </section>
       </main>
       @@include('html/footer.html', {})
     </div>

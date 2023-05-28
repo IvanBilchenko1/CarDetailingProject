@@ -150,12 +150,314 @@
     background-color: #000;
 
     .how-it-works-wrapper {
+        margin: 140px 0;
+        padding: 40px 0;
         .how-it-works-title {
+            text-align: center;
 
+            h3 {
+                font-size: 30px;
+                font-weight: 500;
+                margin-bottom: 18px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+
+            h4 {
+                font-size: 15px;
+                margin-bottom: 18px;
+                font-weight: 400;
+                letter-spacing: 3px;
+            }
         }
 
-        .how-it-works-cart {
+        .how-it-works-body {
+            display: flex;
+            justify-content: space-between;
+              
+            .carre {
+                height: 250px;
+                padding: 20px;
+                font-size: 40px;
+                font-family: Source serif pro;
+                background-color: #1a1d1e;
+                color: #ffffff;
+                position: relative; 
+                transition: background 0.2s ease;
+                margin: 0 10px;
+                text-decoration: none;
+            }
+
+            .carre:hover{
+                color: #1a1d1e;
+                background-color: $orangeColor;
+            }
+
+            .top {
+                font-size: 10px;
+                letter-spacing: 4px;
+                padding-top: 15px;
+                padding-bottom: 20px;
+                text-align: right;
+            }
             
+            .middle {
+                font-size: 30px;
+            }
+            
+            .middletext {
+                font-family: Helvetica;
+                font-size: 10px;
+                font-weight: lighter;
+                line-height: 1.6em;
+                opacity: 0.6;
+                letter-spacing: 1px;
+                margin-top: 15px;
+                text-align: justify;
+            }
+            
+            .bottom {
+                font-family: Helvetica;
+                font-size: 10px;
+                letter-spacing: 4px;
+                position: absolute;
+                bottom: 30px;
+                right: 20px;
+            }    
+        }
+    }
+}
+
+//why choose us
+.why-choose-block {
+    margin-bottom: 60px;
+    
+    h4 {
+        position: relative;
+        padding: 0;
+        color: $orangeColor;
+        line-height: 1;
+        letter-spacing: 0.3px;
+        font-size: 34px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: none;
+        margin-bottom: 30px;
+    
+        &:before {
+        content: '';
+        width: 60px;
+        height: 3px;
+        background: $orangeColor;
+        position: absolute;
+        left: 0px;
+        bottom: -10px;
+        right: 0;
+        margin: 0 auto;
+        }
+    
+        span {
+        font-weight: 700;
+        padding-bottom: 5px;
+        color: #2f2f2f;
+        }
+    }
+    
+    p.service_text {
+        color: #cccccc !important;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+    }
+    
+    p,
+    p.awesome_line {
+        color: #818181;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+    }
+    }
+    
+    .extra-text {
+    font-size: 34px;
+    font-weight: 700;
+    color: #2f2f2f;
+    margin-bottom: 25px;
+    position: relative;
+    text-transform: none;
+    
+    &::before {
+        content: '';
+        width: 60px;
+        height: 3px;
+        background: $orangeColor;
+        position: absolute;
+        left: 0px;
+        bottom: -10px;
+        right: 0;
+        margin: 0 auto;
+    }
+    
+    span {
+        font-weight: 700;
+        color: $orangeColor;
+    }
+    }
+    
+    .item {
+    background: $lightBlack;
+    text-align: center;
+    padding: 30px 25px;
+    box-shadow: 0 0px 25px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    border: 5px solid rgba(0, 0, 0, 0.07);
+    margin-bottom: 30px;
+    transition: all 0.5s ease 0s;
+    
+    &:hover {
+        background: $orangeColor;
+        box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.2);
+        transition: all 0.5s ease 0s;
+    
+        & .item,
+        & span.icon {
+        background: $lightBlack;
+        border-radius: 10px;
+        transition: all 0.5s ease 0s;
+        }
+    
+        & h6,
+        & p {
+        color: $lightBlack;
+        transition: all 0.5s ease 0s;
+        }
+    }
+    
+    .icon {
+        font-size: 40px;
+        margin-bottom: 25px;
+        color: #f91942;
+        width: 90px;
+        height: 90px;
+        line-height: 96px;
+        border-radius: 50px;
+    }
+    
+    .feature_box_col_one {
+        background: rgba(247, 198, 5, 0.2);
+        color: $orangeColor;
+    }
+    
+    .feature_box_col_two {
+        background: rgba(255, 77, 28, 0.15);
+        color: $orangeColor;
+    }
+    
+    .feature_box_col_three {
+        background: rgba(0, 147, 38, 0.15);
+        color: $orangeColor;
+    }
+    
+    .feature_box_col_four {
+        background: rgba(0, 108, 255, 0.15);
+        color: $orangeColor;
+    }
+    
+    .feature_box_col_five {
+        background: rgba(146, 39, 255, 0.15);
+        color: $orangeColor;
+    }
+    
+    .feature_box_col_six {
+        background: rgba(23, 39, 246, 0.15);
+        color: $orangeColor;
+    }
+    
+    p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+    
+    h6 {
+        margin-bottom: 20px;
+        color: #fff;
+    }
+    }
+    
+    .mission {
+    p {
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 28px;
+        font-weight: 500;
+    }
+    
+    i {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: $orangeColor;
+        border-radius: 50%;
+        color: $lightBlack;
+        font-size: 25px;
+    }
+    
+    .small-text {
+        margin-left: 10px;
+        font-size: 13px;
+        color: #666;
+    }
+    }
+    
+    .skills {
+    padding-top: 0px;
+    
+    .prog-item {
+        margin-bottom: 25px;
+    
+        &:last-child {
+        margin-bottom: 0;
+        }
+    
+        p {
+        font-weight: 500;
+        font-size: 15px;
+        margin-bottom: 10px;
+        }
+    
+        .skills-progress {
+        width: 100%;
+        height: 10px;
+        background: $blackColor;
+        border-radius: 20px;
+        position: relative;
+    
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: $orangeColor;
+            width: 10%;
+            border-radius: 10px;
+            transition: all 1s;
+    
+            &::after {
+            content: attr(data-value);
+            position: absolute;
+            top: -5px;
+            right: 0;
+            font-size: 10px;
+            font-weight: 600;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 3px 7px;
+            border-radius: 30px;
+            }
+        }
         }
     }
 }
