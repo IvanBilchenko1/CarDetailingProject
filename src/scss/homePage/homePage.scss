@@ -151,7 +151,7 @@
 
     .how-it-works-wrapper {
         margin: 140px 0;
-        padding: 40px 0;
+        padding: 140px 0;
         .how-it-works-title {
             text-align: center;
 
@@ -458,6 +458,189 @@
             border-radius: 30px;
             }
         }
+        }
+    }
+}
+
+// Services
+.services-wrapper {
+    background-color: #000;
+    padding: 120px 0;
+    .our-services {
+        .section-head {
+            text-align: center;
+            margin-bottom: 32px;
+
+            h2 {
+                font-size: 30px;
+                font-weight: 800;
+                margin-bottom: 18px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+
+                span {
+                    color: $orangeColor;
+                }
+            }
+        }
+        .services-list {
+            display: flex;
+            justify-content: center;
+
+            .services-block {
+                padding: 24px 16px;
+                border-radius: 8px;
+                background-color: #060606;
+                .services-item {
+                    padding: 16px 0;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    font-size: 16px;
+                    color: #fff;
+                }
+            }
+
+            .services-block-1 {
+                width: 50%;
+                margin-right: 24px;
+            }
+
+            .services-block-2 {
+                width: 50%;
+            }
+        }
+        .services-item {
+            color: #fff;
+        }
+    }
+}
+
+$bg: #fff;
+$text: #7288a2;
+$gray: #4d5974;
+$lightgray: #e5e5e5;
+
+
+//faq
+
+.faq-block {
+    padding: 140px 0;
+
+    .faq-title {
+        h2 {
+            color: #000;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-align: center;
+            margin-bottom: 56px;
+        }
+    }
+
+    .accordion {
+        max-width: 600px;
+        margin: 0 auto;
+        .accordion-item {
+            border: none;
+          button[aria-expanded='true'] {
+            border-bottom: 1px solid $orangeColor;
+          }
+          
+          .accordion-content {
+            p {
+                color: #000;
+            }
+          }
+        }
+        button {
+          position: relative;
+          display: block;
+          text-align: left;
+          width: 100%;
+          padding: 1em 0;
+          color: $text;
+          font-size: 1.15rem;
+          font-weight: 400;
+          border-bottom: 1px solid $lightgray;
+          background: none;
+          outline: none;
+
+          .accordion-title {
+            color: #000;
+            
+                &:hover, &:focus {
+                    cursor: pointer;
+                    color: $orangeColor;
+                    &::after {
+                    cursor: pointer;
+                    color: $orangeColor;
+                    border: 1px solid $orangeColor;
+                    }
+                }
+            }
+          .accordion-title {
+            padding: 1em 1.5em 1em 0;
+          }
+          .icon {
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            color: #000;
+            border: 1px solid;
+            border-radius: 22px;
+            &::before {
+              display: block;
+              position: absolute;
+              content: '';
+              top: 9px;
+              left: 5px;
+              width: 10px;
+              height: 2px;
+              background: currentColor;
+            }
+            &::after {
+              display: block;
+              position: absolute;
+              content: '';
+              top: 5px;
+              left: 9px;
+              width: 2px;
+              height: 10px;
+              background: currentColor;
+            }
+          }
+        }
+        button[aria-expanded='true'] {
+          color: $orangeColor;
+          .icon {
+            color: $orangeColor;
+            &::after {
+              width: 0;
+            }
+          }
+          + .accordion-content {
+            opacity: 1;
+            max-height: 9em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+          }
+        }
+        .accordion-content {
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: opacity 200ms linear, max-height 200ms linear;
+          will-change: opacity, max-height;
+          p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 2em 0;
+          }
         }
     }
 }

@@ -6,15 +6,32 @@
 
  * Если мы хотим добавить модуль следует его раскомментировать
  */
+
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+
 import {
   isWebp,
   headerFixed,
   togglePopupWindows,
   addTouchClass,
   addLoadedClass,
+  faqPage,
 } from './modules';
 
-// import BurgerMenu from './modules/BurgerMenu';
+import BurgerMenu from './modules/BurgerMenu';
 
 // import Tabs from 'modules/Tabs';
 
@@ -28,6 +45,7 @@ import {
  ! (i) необходимо для корректного отображения webp из css
  */
 isWebp();
+faqPage();
 
 /* Добавление класса touch для HTML если браузер мобильный */
 // addTouchClass();
@@ -48,7 +66,7 @@ isWebp();
 // const mousePrlx = new MousePRLX({});
 
 /** Фиксированный header */
-// headerFixed();
+headerFixed();
 
 /**
  *  Открытие/закрытие модальных окон
