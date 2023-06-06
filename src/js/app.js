@@ -29,6 +29,7 @@ import {
   addTouchClass,
   addLoadedClass,
   faqPage,
+  burgerMenu,
 } from './modules';
 
 import BurgerMenu from './modules/BurgerMenu';
@@ -46,6 +47,7 @@ import BurgerMenu from './modules/BurgerMenu';
  */
 isWebp();
 faqPage();
+burgerMenu();
 
 /* Добавление класса touch для HTML если браузер мобильный */
 // addTouchClass();
