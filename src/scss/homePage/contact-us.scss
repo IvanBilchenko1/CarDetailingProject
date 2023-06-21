@@ -1,6 +1,39 @@
 .contact-us {
     padding: 100px 0 140px 0;
 
+    @media only screen and (max-width: 992px) {
+      padding: 150px 0 140px 0;
+    }
+
+    .back-btn {
+      margin-left: 195px;
+      margin-bottom: 24px;
+
+      @media only screen and (max-width: 1199px) {
+        margin-left: 164px;
+      }
+
+      @media only screen and (max-width: 992px) {
+        display: none;
+      }
+
+      a {
+        color: #000;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-decoration: underline;
+        letter-spacing: 1px;
+
+        svg path {
+          fill: $orangeColor;
+        }
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+
     .contact-us-title {
         h1 {
             color: #000;
@@ -10,6 +43,10 @@
             font-weight: 800;
             letter-spacing: 3px;
         }
+    }
+
+    .contact-form-wrapper {
+      margin: 0 auto;
     }
 
     .btn {

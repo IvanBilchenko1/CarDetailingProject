@@ -62,17 +62,6 @@ function setHash(hash) {
   history.pushState('', '', hash);
 }
 
-// Функция для фиксированной шапки при скролле ===========================================================
-function headerFixed() {
-  const headerStickyObserver = new IntersectionObserver(([entry]) => {
-    header.classList.toggle('sticky', !entry.isIntersecting);
-  });
-
-  if (firstScreen) {
-    headerStickyObserver.observe(firstScreen);
-  }
-}
-
 // Универсальная функция для открытия и закрытия попапов ==================================================
 const togglePopupWindows = () => {
   document.addEventListener('click', ({ target }) => {
@@ -173,6 +162,24 @@ function validateForm() {
   return true;
 }
 
+function closeBurger() {
+  // Get the mobile navigation button
+  const mobileNavButton = document.querySelector('.mobile-nav-button');
+
+  // Get all the menu item links
+  const menuItems = document.querySelectorAll('.mobile-menu li a');
+
+  function handleClick() {
+    // Trigger a click event on the mobile navigation button
+    mobileNavButton.click();
+  }
+
+  menuItems.forEach((menuItem) => {
+    menuItem.addEventListener('click', handleClick);
+  });
+}
+
+
 function burgerMenu() {
     //Menu button on click event
     document.querySelector('.mobile-nav-button').addEventListener('click', function() {
@@ -197,7 +204,7 @@ export {
   isWebp,
   isMobile,
   addTouchClass,
-  headerFixed,
+  closeBurger,
   togglePopupWindows,
   addLoadedClass,
   getHash,

@@ -6,9 +6,8 @@
   &__container {
     display: flex;
 
-    @include media(510) {
+    @media only screen and (max-width: 992px) {
       flex-direction: column;
-      align-items: flex-start;
     }
   }
 
@@ -17,10 +16,64 @@
   }
 
   .footer__nav-info {
+
+    @media only screen and (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .footer__nav-name {
-        h2 {
-        font-size: 32px;
+        a {
+          img {
+            width: 100px;
+          }
         }
+    }
+  }
+
+  .footer__nav-location  {
+    @media only screen and (max-width: 992px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .footer__nav-social {
+    @media only screen and (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer__nav-hours {
+        margin: 0;
+        margin: 48px 0 24px 0;
+        .footer__nav-title {
+          margin-bottom: 8px;
+        }
+      }
+
+      .footer__nav-follow {
+        margin: 0;
+        margin: 24px 0;
+        .footer__nav-title {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  .footer__nav-contact {
+
+    @media only screen and (max-width: 992px) {
+      text-align: center;
+    }
+    a {
+      svg {
+        margin-right: 8px;
+      }
     }
   }
 

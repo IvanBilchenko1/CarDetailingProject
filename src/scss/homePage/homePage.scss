@@ -9,12 +9,46 @@
 .main-page {
     padding: $mainPadding;
 
+    @media only screen and (max-width: 455px) {
+        padding: 200px 0px 280px 0px;
+    }
+
     .main-title-text {
         font-size: $text-56;
+
+        @media only screen and (max-width: 550px) {
+            font-size: $text-42;
+        }
+
+        @media only screen and (max-width: 412px) {
+            font-size: $text-32;
+        }
     }
 
     .main-title-subtext {
         font-size: $text-24;
+
+        @media only screen and (max-width: 550px) {
+            font-size: $text-18;
+        }
+
+        @media only screen and (max-width: 412px) {
+            font-size: $text-16;
+            letter-spacing: 1px;
+        }
+    }
+
+    .btn {
+        @media only screen and (max-width: 550px) {
+            max-width: 300px;
+            height: 55px;
+        }
+    }
+
+    .main-bookus-button {
+        @media only screen and (max-width: 550px) {
+            margin: 24px 0px 18px 0px;
+        }
     }
 }
 
@@ -22,14 +56,42 @@
 .about-block {
     margin: 100px 0px 100px 0px;
 
+    @media only screen and (max-width: 945px) {
+        margin: 0px 0px 120px 0px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        margin: 0px 0px 80px 0px;
+    }
+
     .about-us-wrapper {
         .about-us-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @media only screen and (max-width: 945px) {
+                display: block;
+                margin: 0 auto;
+            }
+
             .about-us-description {
                 max-width: 555px;
                 width: 100%;
+                margin-right: 62px;
+
+                @media only screen and (max-width: 945px) {
+                    padding-bottom: 58px;
+                    max-width: 100%;
+                    text-align: center;
+                    margin-right: 0;
+                }
+
+                @media only screen and (max-width: 455px) {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: inherit;
+                }
 
                 .about-us-header {
                     h2 {
@@ -86,16 +148,20 @@
             }
 
             .about-us-image {
-
                 .image {
-                    width: 500px;
+                    width: 600px;
                     height: 350px;
                     position: relative;
                     cursor: pointer;
+
+                    @media only screen and (max-width: 945px) {
+                        margin: 0 auto;
+                        width: 100%;
+                    }
                   
                     span {
                       position: absolute;
-                      background: url(https://picsum.photos/id/182/2896/1944) no-repeat center/cover;
+                      background: url('../images/car.png') no-repeat center/cover;
                       inset: 0;
                       transition: 0.6s ease-in-out;
                   
@@ -150,10 +216,21 @@
     background-color: #000;
 
     .how-it-works-wrapper {
-        margin: 140px 0;
+        margin: 140px 0 80px 0;
         padding: 140px 0;
+
+        @media only screen and (max-width: 992px) {
+            margin: 0;
+            margin-bottom: 20px;
+            padding: 80px 0;
+        }
+
         .how-it-works-title {
             text-align: center;
+
+            @media only screen and (max-width: 992px) {
+                margin-bottom: 32px;
+            }
 
             h3 {
                 font-size: 30px;
@@ -165,18 +242,29 @@
 
             h4 {
                 font-size: 15px;
-                margin-bottom: 18px;
+                margin-bottom: 48px;
                 font-weight: 400;
                 letter-spacing: 3px;
+
+                @media only screen and (max-width: 992px) {
+                    margin-bottom: 32px;
+                }
             }
         }
 
         .how-it-works-body {
             display: flex;
             justify-content: space-between;
+
+            @media only screen and (max-width: 992px) {
+                margin: 0 auto;
+                width: 100%;
+                flex-direction: column;
+            }
               
             .carre {
-                height: 250px;
+                min-height: 393px;
+                max-width: 280px;
                 padding: 20px;
                 font-size: 40px;
                 font-family: Source serif pro;
@@ -186,34 +274,50 @@
                 transition: background 0.2s ease;
                 margin: 0 10px;
                 text-decoration: none;
+
+                @media only screen and (max-width: 992px) {
+                    margin-bottom: 24px;
+                    height: 215px;
+                    min-height: 100%;
+                    max-width: 100%;
+                }
             }
 
             .carre:hover{
                 color: #1a1d1e;
                 background-color: $orangeColor;
+                .top {
+                    color: white;
+                }
             }
 
             .top {
-                font-size: 10px;
+                font-size: 12px;
                 letter-spacing: 4px;
                 padding-top: 15px;
                 padding-bottom: 20px;
                 text-align: right;
+                color: $orangeColor;
             }
             
             .middle {
-                font-size: 30px;
+                font-size: 22px;
+                line-height: 120%;
             }
             
             .middletext {
                 font-family: Helvetica;
-                font-size: 10px;
+                font-size: 12px;
                 font-weight: lighter;
                 line-height: 1.6em;
                 opacity: 0.6;
                 letter-spacing: 1px;
                 margin-top: 15px;
                 text-align: justify;
+
+                @media only screen and (max-width: 992px) {
+                    font-size: 12px;
+                }
             }
             
             .bottom {
@@ -231,6 +335,10 @@
 //why choose us
 .why-choose-block {
     margin-bottom: 60px;
+
+    .section-head {
+        margin-bottom: 42px;
+    }
     
     h4 {
         position: relative;
@@ -306,14 +414,18 @@
     }
     
     .item {
-    background: $lightBlack;
-    text-align: center;
-    padding: 30px 25px;
-    box-shadow: 0 0px 25px rgba(0, 0, 0, 0.07);
-    border-radius: 20px;
-    border: 5px solid rgba(0, 0, 0, 0.07);
-    margin-bottom: 30px;
-    transition: all 0.5s ease 0s;
+        background: $lightBlack;
+        text-align: center;
+        padding: 30px 25px;
+        box-shadow: 0 0px 25px rgba(0, 0, 0, 0.07);
+        border-radius: 20px;
+        border: 5px solid rgba(0, 0, 0, 0.07);
+        margin-bottom: 30px;
+        transition: all 0.5s ease 0s;
+
+        @media only screen and (max-width: 655px) {
+            padding: 16px 8px;
+        }
     
     &:hover {
         background: $orangeColor;
@@ -466,6 +578,15 @@
 .services-wrapper {
     background-color: #000;
     padding: 120px 0;
+
+    @media only screen and (max-width: 992px) {
+        padding: 80px 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding: 40px 0;
+    }
+
     .our-services {
         .section-head {
             text-align: center;
@@ -487,10 +608,15 @@
             display: flex;
             justify-content: center;
 
+            @media only screen and (max-width: 575px) {
+                flex-direction: column;
+            }
+
             .services-block {
                 padding: 24px 16px;
                 border-radius: 8px;
                 background-color: #060606;
+
                 .services-item {
                     padding: 16px 0;
                     font-weight: 600;
@@ -503,10 +629,23 @@
             .services-block-1 {
                 width: 50%;
                 margin-right: 24px;
+
+                @media only screen and (max-width: 600px) {
+                    padding-right: 10px;
+                }
+
+                @media only screen and (max-width: 575px) {
+                    margin-bottom: 18px;
+                    width: 100%;
+                }
             }
 
             .services-block-2 {
                 width: 50%;
+
+                @media only screen and (max-width: 575px) {
+                    width: 100%;
+                }
             }
         }
         .services-item {
@@ -525,6 +664,14 @@ $lightgray: #e5e5e5;
 
 .faq-block {
     padding: 140px 0;
+
+    @media only screen and (max-width: 992px) {
+        padding: 80px 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding: 40px 0;
+    }
 
     .faq-title {
         h2 {
@@ -546,6 +693,10 @@ $lightgray: #e5e5e5;
             border: none;
           button[aria-expanded='true'] {
             border-bottom: 1px solid $orangeColor;
+          }
+
+          button {
+            padding-right: 30px;
           }
           
           .accordion-content {

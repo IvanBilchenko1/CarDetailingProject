@@ -5,6 +5,17 @@
   background-color: $blackColor;
 
   .header__container {
+    .header__nav-logo {
+      a {
+        img {
+          width: 80px;
+
+          @media only screen and (max-width: 992px) {
+            width: 70px;
+          }
+        }
+      }
+    }
     @media only screen and (max-width: 992px) {
       height: 4.25rem;
     }
@@ -15,7 +26,7 @@
       position: fixed;
       width: 100%;
       z-index: 100;
-      background-color: black;
+      background-color: $blackColor;
     }
   }
   
@@ -31,7 +42,7 @@
       align-items: center;
       text-transform: uppercase;
         .menu__list {
-          margin-left: 32px;
+          margin-left: 16px;
           align-items: center;
           margin-right: 32px;
 
