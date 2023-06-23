@@ -16,8 +16,6 @@ function isWebp() {
   testWebp((support) => {
     const className = support ? 'webp' : 'no-webp';
     html.classList.add(className);
-
-    console.log(support ? 'webp поддерживается' : 'webp не поддерживается');
   });
 }
 
@@ -60,6 +58,14 @@ const getHash = () => location.hash?.replace('#', '');
 function setHash(hash) {
   hash = hash ? `#${hash}` : location.href.split('#')[0];
   history.pushState('', '', hash);
+}
+function homeRedirect() {
+  var bookButton = document.getElementById("bookButton");
+  if (bookButton) {
+    bookButton.onclick = function() {
+      window.open("https://calendly.com/detailingonwheels-ca/booking", "_blank");
+    };
+  }
 }
 
 // Универсальная функция для открытия и закрытия попапов ==================================================
@@ -109,82 +115,19 @@ const faqPage = () => {
   items.forEach(item => item.addEventListener('click', toggleAccordion));
 }
 
-function validateForm() {
-  var n = document.getElementById('name').value;
-  var e = document.getElementById('email').value;
-  var s = document.getElementById('subject').value;
-  var m = document.getElementById('message').value;
-  var onlyLetters = /^[a-zA-Z\s]*$/;
-  var onlyEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-  if (n === "" || n === null) {
-    document.getElementById('nameLabel').innerHTML = 'Please enter your name';
-    document.getElementById('name').style.borderColor = "red";
-    return false;
-  }
-
-  if (!n.match(onlyLetters)) {
-    document.getElementById('nameLabel').innerHTML = 'Please enter only letters';
-    document.getElementById('name').style.borderColor = "red";
-    return false;
-  }
-
-  if (e === "" || e === null) {
-    document.getElementById('emailLabel').innerHTML = 'Please enter your email';
-    document.getElementById('email').style.borderColor = "red";
-    return false;
-  }
-
-  if (!e.match(onlyEmail)) {
-    document.getElementById('emailLabel').innerHTML = 'Please enter a valid email address';
-    document.getElementById('email').style.borderColor = "red";
-    return false;
-  }
-
-  if (s === "" || s === null) {
-    document.getElementById('subjectLabel').innerHTML = 'Please enter your subject';
-    document.getElementById('subject').style.borderColor = "red";
-    return false;
-  }
-
-  if (!s.match(onlyLetters)) {
-    document.getElementById('subjectLabel').innerHTML = 'Please enter only letters';
-    document.getElementById('subject').style.borderColor = "red";
-    return false;
-  }
-
-  if (m === "" || m === null) {
-    document.getElementById('messageLabel').innerHTML = 'Please enter your message';
-    document.getElementById('message').style.borderColor = "red";
-    return false;
-  }
-
-  return true;
-}
-
-function closeBurger() {
-  // Get the mobile navigation button
+function burgerMenu () {
   const mobileNavButton = document.querySelector('.mobile-nav-button');
-
-  // Get all the menu item links
   const menuItems = document.querySelectorAll('.mobile-menu li a');
 
   function handleClick() {
-    // Trigger a click event on the mobile navigation button
     mobileNavButton.click();
   }
 
   menuItems.forEach((menuItem) => {
     menuItem.addEventListener('click', handleClick);
   });
-}
 
-
-function burgerMenu() {
-    //Menu button on click event
-    document.querySelector('.mobile-nav-button').addEventListener('click', function() {
-      console.log('here');
-      
+  document.querySelector('.mobile-nav-button').addEventListener('click', function() {
       var line1 = document.querySelector(".mobile-nav-button .mobile-nav-button__line:nth-of-type(1)");
       var line2 = document.querySelector(".mobile-nav-button .mobile-nav-button__line:nth-of-type(2)");
       var line3 = document.querySelector(".mobile-nav-button .mobile-nav-button__line:nth-of-type(3)");
@@ -202,14 +145,12 @@ function burgerMenu() {
 
 export {
   isWebp,
-  isMobile,
+  homeRedirect,
   addTouchClass,
-  closeBurger,
   togglePopupWindows,
   addLoadedClass,
+  burgerMenu,
   getHash,
   faqPage,
-  setHash,
-  validateForm,
-  burgerMenu,
+  setHash
 };

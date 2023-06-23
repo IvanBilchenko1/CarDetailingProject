@@ -161,5 +161,58 @@
       .form-title {
           font-size: 20px;
     }
+}
+
+.contact-us-confirmation {
+  padding: 180px 0px 220px 0;
+
+  @media only screen and (max-width: 992px) {
+    padding: 280px 0px 220px 0;
   }
+
+  .contact-us-title {
+    h1 {
+      font-size: 62px;
+
+      @media only screen and (max-width: 400px) {
+        font-size: 48px;
+        letter-spacing: 2px;
+      }
+
+      @media only screen and (max-width: 315px) {
+        font-size: 36px;
+        letter-spacing: 2px;
+      }
+
+      @media only screen and (max-width: 260px) {
+        font-size: 24px;
+        letter-spacing: 2px;
+      }
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 42px;
+      color: #000;
+
+      @media only screen and (max-width: 315px) {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .confirmation-back-btn {
+    text-align: center;
+    margin: 0;
+
+    a {
+      color: #fff;
+
+      @media only screen and (max-width: 315px) {
+        font-size: 12px;
+      }
+    }
+  }
+}
   

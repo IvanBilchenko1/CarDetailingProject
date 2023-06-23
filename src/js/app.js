@@ -11,21 +11,17 @@ function toggleAccordion() {
     this.setAttribute('aria-expanded', 'true');
   }
 }
+
 items.forEach(item => item.addEventListener('click', toggleAccordion));
 
 import {
   isWebp,
-  closeBurger,
-  togglePopupWindows,
-  addTouchClass,
-  addLoadedClass,
   faqPage,
-  burgerMenu,
+  homeRedirect,
+  burgerMenu
 } from './modules';
 
-import BurgerMenu from './modules/BurgerMenu';
-
 isWebp();
-closeBurger();
-faqPage();
+homeRedirect();
 burgerMenu();
+faqPage();

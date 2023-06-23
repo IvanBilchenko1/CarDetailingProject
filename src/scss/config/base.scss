@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
   font-family: 'Asap', sans-serif;
+  position: relative;
   &.lock {
     overflow: hidden;
     touch-action: none;

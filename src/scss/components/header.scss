@@ -8,10 +8,10 @@
     .header__nav-logo {
       a {
         img {
-          width: 80px;
+          width: 60px;
 
           @media only screen and (max-width: 992px) {
-            width: 70px;
+            width: 55px;
           }
         }
       }
@@ -119,6 +119,7 @@
         max-width:500px;
         width:100%;
         right:-100%;
+        min-height: 100vh;
         height: 100%;
         background: $orangeColor;
         position:absolute;
@@ -184,6 +185,7 @@
     }
       .mobile-menu--open {
           right:0;
+          height: 100%;
           opacity:1;
           position: fixed;
 
