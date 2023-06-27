@@ -8,7 +8,7 @@
     .header__nav-logo {
       a {
         img {
-          width: 60px;
+          width: 50px;
 
           @media only screen and (max-width: 992px) {
             width: 55px;
@@ -42,9 +42,9 @@
       align-items: center;
       text-transform: uppercase;
         .menu__list {
-          margin-left: 16px;
+          margin: 0 58px 0;
+          padding: 0;
           align-items: center;
-          margin-right: 32px;
 
           li {
             margin-right: 16px;
@@ -57,9 +57,27 @@
 
         .menu__social {
           align-items: center;
+          padding: 0;
 
           li {
             margin-right: 16px;
+
+            a {
+              svg {
+                height: 20px;
+                width: 20px;
+
+                &:hover {
+                  path {
+                    color: white;
+                  }
+                }
+              }
+
+              svg path {
+                color: $orangeColor;
+              }
+            }
 
             &:last-child {
               margin-right: 0;

@@ -25,9 +25,19 @@
     }
 
     .footer__nav-name {
+      margin-bottom: 24px ;
+
+      @media only screen and (max-width: 992px) {
+        margin-bottom: 32px;
+      }
+      
         a {
           img {
-            width: 85px;
+            width: 65px;
+
+            @media only screen and (max-width: 992px) {
+              width: 70px;
+            }
           }
         }
     }
