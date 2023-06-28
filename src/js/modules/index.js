@@ -143,6 +143,51 @@ function burgerMenu () {
   });
 }
 
+$(document).ready(function() {
+  var hasPopupShown = sessionStorage.getItem('popupShown');
+
+  if (!hasPopupShown) {
+    setTimeout(function() {
+      $('#popup').fadeIn();
+      sessionStorage.setItem('popupShown', true);
+    }, 10000);
+  }
+
+  $('.close-popup').click(function(e) {
+    e.preventDefault();
+    $(this).closest('.popup').fadeOut();
+  });
+
+  $('.popup-overlay').click(function(e) {
+    if ($(e.target).hasClass('popup-overlay')) {
+      $('.popup').fadeOut();
+    }
+  });
+
+  $('.promo-popup').submit(function(e) {
+    e.preventDefault();
+    var form = $(this);
+    var spinner = $('#spinner');
+    spinner.addClass("d-block");
+
+    $.ajax({
+      type: form.attr('method'),
+      url: form.attr('action'),
+      data: form.serialize(),
+      success: function(response) {
+        if (response === 'success') {
+          $('#popup').fadeOut();
+          $('#thank-you-popup').fadeIn();
+        }
+      },
+      complete: function() {
+        spinner.removeClass("d-block");
+        spinner.addClass("d-none");
+      }
+    });
+  });
+});
+
 export {
   isWebp,
   homeRedirect,

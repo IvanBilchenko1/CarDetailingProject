@@ -33,4 +33,27 @@
         </div>
       </div>
     </div>
+    <div class="popup popup-overlay" id="popup">
+        <div class="popup-wrapper">
+            <div class="popup-content">
+                <h2>Get 25% off at any servise</h2>
+                <p>Enter your email to receive promo code</p>
+                <form class="promo-popup text" method="POST" action="promo.php">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button class="btn" type="submit">Submit</button>
+                  </form>
+                <a href="#" class="close-popup">Close</a>
+            </div>
+            <div class="spinner-wrapper" id="spinner">
+              <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup-confirm popup-overlay" id="thank-you-popup" style="display: none;">
+      <div class="popup-content">
+          <h2>Thank You!</h2>
+          <p>Thank you for signing up. Check your email for the promo code.</p>
+          <a href="#" class="close-popup">Close</a>
+      </div>
+  </div>
 </footer>
