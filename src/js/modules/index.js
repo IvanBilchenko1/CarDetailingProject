@@ -203,18 +203,32 @@ $(document).ready(function() {
   });
 
   function closeBurgerMenu() {
-    var line1 = $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(1)");
-    var line2 = $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(2)");
-    var line3 = $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(3)");
+      var line1 = $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(1)");
+      var line2 = $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(2)");
+      var line3 = $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(3)");
 
-    line1.removeClass("mobile-nav-button__line--1");
-    line2.removeClass("mobile-nav-button__line--2");
-    line3.removeClass("mobile-nav-button__line--3");
+      line1.removeClass("mobile-nav-button__line--1");
+      line2.removeClass("mobile-nav-button__line--2");
+      line3.removeClass("mobile-nav-button__line--3");
 
-    var mobileMenu = $('.mobile-menu');
-    mobileMenu.removeClass('mobile-menu--open');
-  }
-});
+      var mobileMenu = $('.mobile-menu');
+      mobileMenu.removeClass('mobile-menu--open');
+    }
+  });
+
+  $(document).ready(function() {
+    function toggleAccordion() {
+          var itemToggle = $(this).attr('aria-expanded');
+        
+          $('.item').attr('aria-expanded', 'false');
+        
+          if (itemToggle === 'false') {
+            $(this).attr('aria-expanded', 'true');
+          }
+      }
+
+      $('.item').on('click', toggleAccordion);
+  });
 
 export {
   isWebp,
