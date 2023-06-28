@@ -115,7 +115,7 @@ const faqPage = () => {
   items.forEach(item => item.addEventListener('click', toggleAccordion));
 }
 
-function burgerMenu () {
+function burgerMenu() {
   const mobileNavButton = document.querySelector('.mobile-nav-button');
   const menuItems = document.querySelectorAll('.mobile-menu li a');
 
@@ -128,18 +128,27 @@ function burgerMenu () {
   });
 
   document.querySelector('.mobile-nav-button').addEventListener('click', function() {
-      var line1 = document.querySelector(".mobile-nav-button .mobile-nav-button__line:nth-of-type(1)");
-      var line2 = document.querySelector(".mobile-nav-button .mobile-nav-button__line:nth-of-type(2)");
-      var line3 = document.querySelector(".mobile-nav-button .mobile-nav-button__line:nth-of-type(3)");
-      
-      line1.classList.toggle("mobile-nav-button__line--1");
-      line2.classList.toggle("mobile-nav-button__line--2");
-      line3.classList.toggle("mobile-nav-button__line--3");
-      
-      var mobileMenu = document.querySelector('.mobile-menu');
-      mobileMenu.classList.toggle('mobile-menu--open');
-      
-      return false;
+    var line1 = document.querySelector(".mobile-nav-button .mobile-nav-button__line:nth-of-type(1)");
+    var line2 = document.querySelector(".mobile-nav-button .mobile-nav-button__line:nth-of-type(2)");
+    var line3 = document.querySelector(".mobile-nav-button .mobile-nav-button__line:nth-of-type(3)");
+
+    line1.classList.toggle("mobile-nav-button__line--1");
+    line2.classList.toggle("mobile-nav-button__line--2");
+    line3.classList.toggle("mobile-nav-button__line--3");
+
+    var mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.classList.toggle('mobile-menu--open');
+
+    // Add or remove additional CSS properties based on menu state
+    if (mobileMenu.classList.contains('mobile-menu--open')) {
+      // Burger menu is open
+      document.body.classList.add('overflow-hidden'); // Add class to body
+    } else {
+      // Burger menu is closed
+      document.body.classList.remove('overflow-hidden'); // Remove class from body
+    }
+
+    return false;
   });
 }
 
@@ -150,17 +159,21 @@ $(document).ready(function() {
     setTimeout(function() {
       $('#popup').fadeIn();
       sessionStorage.setItem('popupShown', true);
+      $('body').css('overflow', 'hidden'); // Add overflow: hidden to body
+      closeBurgerMenu(); // Close the burger menu
     }, 10000);
   }
 
   $('.close-popup').click(function(e) {
     e.preventDefault();
     $(this).closest('.popup').fadeOut();
+    $('body').css('overflow', 'auto');
   });
 
   $('.popup-overlay').click(function(e) {
     if ($(e.target).hasClass('popup-overlay')) {
       $('.popup').fadeOut();
+      $('body').css('overflow', 'auto');
     }
   });
 
@@ -178,14 +191,29 @@ $(document).ready(function() {
         if (response === 'success') {
           $('#popup').fadeOut();
           $('#thank-you-popup').fadeIn();
+          $('body').css('overflow', 'hidden');
         }
       },
       complete: function() {
         spinner.removeClass("d-block");
         spinner.addClass("d-none");
+        $('body').css('overflow', 'auto');
       }
     });
   });
+
+  function closeBurgerMenu() {
+    var line1 = $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(1)");
+    var line2 = $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(2)");
+    var line3 = $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(3)");
+
+    line1.removeClass("mobile-nav-button__line--1");
+    line2.removeClass("mobile-nav-button__line--2");
+    line3.removeClass("mobile-nav-button__line--3");
+
+    var mobileMenu = $('.mobile-menu');
+    mobileMenu.removeClass('mobile-menu--open');
+  }
 });
 
 export {
