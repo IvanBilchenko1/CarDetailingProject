@@ -51,9 +51,81 @@
     }
 }
 
+//slick
+.section-adds {
+    h2 {
+        text-align: center;
+        font-size: 62px;
+        font-weight: 500;
+        margin: 90px 0;
+    }
+}
+.carousel {
+    margin: 0px auto;
+    display: flex;
+  
+    .slick-slide {
+      margin: 10px;
+  
+      img {
+        width: 100%;
+      }
+    }
+  
+    .slick-prev,
+    .slick-next {
+      background: #000;
+      border-radius: 15px;
+      border-color: transparent;
+    }
+  }
+  
+  .card {
+    border: 2px solid #fff;
+    box-shadow: 1px 1px 15px #ccc;
+    flex: 1;
+
+    .card-header {
+        padding: 0;
+        img {
+            width: 100%;
+            max-height: 290px;
+        }
+    }
+  
+    &-body { // Example of nesting and using parent selector reference
+      background: #fff;
+      width: 100%;
+      padding: 0;
+      vertical-align: top;
+    }
+  
+    &-content {
+      text-align: left;
+      display: grid; /* Added */
+      grid-template-rows: auto 1fr; /* Added */
+      color: #333;
+      padding: 15px;
+    }
+  
+    &-text {
+      font-size: 14px;
+    }
+
+    .card-title {
+        color: #000;
+    }
+
+    .card-text {
+        p {
+            color: #000;
+        }
+    }
+}
+
 //about block start
 .about-block {
-    margin: 100px 0px 260px 0px;
+    margin: 100px 0px 180px 0px;
 
     @media only screen and (max-width: 992px) {
         margin: 0px 0px 120px 0px;
@@ -747,11 +819,15 @@
         text-transform: uppercase;
         font-weight: 800;
         text-align: center;
-        padding: 9px 20px;
+        padding: 10px 20px;
         border-radius: 6px;
         box-shadow: 1px 0 4px rgba(0, 0, 0, 0.4);
         margin-bottom: 20px;
         transition: translate 0.2s;
+
+        @media only screen and (max-width: 992px) {
+            padding: 14px 20px;
+        }
 
         &:hover {
             @media only screen and (min-width: 992px) {

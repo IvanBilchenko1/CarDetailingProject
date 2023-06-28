@@ -147,3 +147,31 @@ li {
     padding-top: rem($headerHeight);
   }
 }
+
+//slick slider
+
+.carousel {
+  .slick-dots {
+    bottom: -45px;
+
+    @media only screen and (max-width: 600px) {
+      bottom: -55px;
+    }
+    .slick-active {
+      button {
+        &:before {
+          color: $orangeColor;
+          opacity: unset;
+        }
+      }
+    }
+
+    button {
+      &:before {
+        color: #858585;
+        opacity: unset;
+        font-size: 10px;
+      }
+    }
+  }
+}
