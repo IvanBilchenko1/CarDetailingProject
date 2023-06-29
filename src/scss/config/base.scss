@@ -148,14 +148,25 @@ li {
   }
 }
 
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+
 //slick slider
 
 .carousel {
   .slick-dots {
-    bottom: -45px;
+    bottom: -75px;
+
+    li {
+      margin: 0;
+    }
 
     @media only screen and (max-width: 600px) {
-      bottom: -55px;
+      bottom: -40px;
     }
     .slick-active {
       button {
@@ -171,6 +182,10 @@ li {
         color: #858585;
         opacity: unset;
         font-size: 10px;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 8px;
+        }
       }
     }
   }
